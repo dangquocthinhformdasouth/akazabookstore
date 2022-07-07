@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid bg-success">
+        <img src="img/bannergif3.gif" class="banner-top-navbar mt-3" alt="">
+    </div>
+    <!-- Menu -->
+    <nav class="navbar container-fluid navbar-expand-sm navbar-dark bg-success mb-3">
+        <div class="container">
+            <a class="navbar-brand text-white px-2" href="javascript:void(0)"> <img src="img/logo2.jpg" style="width: 40px;" alt=""> <span class="border-start border-3 border-dark ps-1">Akaza Bookstore</span> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                 <span class="navbar-toggler-icon"></span>
+                 </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item px-2 mt-1">
+                        <a class="nav-link text-white btn btn-success" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item px-2 mt-2">
+                        <div class="dropdown">
+                            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                              Thể Loại
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-white" aria-labelledby="">
+                                <li><a class="dropdown-item active" href="#tieuthuyet">Tiểu Thuyết</a></li>
+                                <li><a class="dropdown-item" href="#loisong">Lối Sống</a></li>
+                                <li><a class="dropdown-item" href="#truyentranh">Truyện Tranh</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <form>
+                            <div class="input-group mt-2">
+                                <input type="text" class="form-control rounded-pill border-success" placeholder="Tìm kiếm..." aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                <button class="btn btn-success rounded-circle" type="button" id="button-addon1"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+
+                        </form>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-success mt-2 " data-bs-toggle="modal" data-bs-target="#exampleModal"> Đăng nhập </button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header  bg-success">
+                                        <h5 class="modal-title h4 text-center text-white" id="exampleModalLabel"><img src="img/logo2.jpg" style="width: 45px;;" alt=""> ĐĂNG NHẬP</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label for="" class="my-1">Nhập tên tài khoản<span class="text-danger">*</span></label>
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="floatingInput" placeholder="name@example.com">
+                                            <label for="floatingInput" class="text-success">Tên tài khoản</label>
+                                        </div>
+                                        <label for="" class="my-1">Nhập mật khẩu<span class="text-danger">*</span></label>
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" type="password" id="floatingInput" placeholder="name@example.com">
+                                            <label for="floatingInput" class="text-success">Mật khẩu</label>
+                                        </div>
+                                        <hr class="text-success">
+                                        <label for="" class="my-1 text-center text-success h6">Hoặc đăng nhập bằng</label>
+                                        <center>
+                                            <button type="button" class="btn btn-primary rounded-pill my-1"><span class="fa-brands fa-facebook " style="font-size:17px ;"></span> Đăng nhập bằng Facebook</button>
+                                            <button type="button" class="btn btn-danger rounded-pill my-1 px-4"><span class="fa-brands fa-google" style="font-size:17px ;"></span> Đăng nhập bằng Google</button>
+                                        </center>
+                                    </div>
+                                    <center>
+                                        <button type="button" class="btn btn-success px-5 my-2">Đăng nhập</button>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dangky.html"><button type="button" class="btn btn-success mt-2 me-4">Đăng ký</button></a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <button type="button" class="btn btn-success position-relative border-white rounded-3">
+                                <a class="nav-link" href="javascript:void(0)"><i class="fa-solid fa-money-check-dollar"></i> </a>
+                            </button>
+                    </li>
+                    <li class="nav-item me-2">
+                        <button type="button" class="btn btn-success position-relative border-white rounded-circle">
+                                <a class="nav-link" href="giohang.html"><i class="fa-solid fa-cart-shopping"></i> </a>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                            </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <i class=" fa-solid fa-cart-shopping border border-success p-3 rounded-circle text-success" style="font-size:25px;"></i>
+                <i class="fa-solid fa-circle text-success"></i>
+                <span class="text-success">------------------------------</span>
+                <i class="fa-solid fa-circle text-success"></i>
+                <i class="fa-solid fa-money-check-dollar border border-success p-3 rounded-circle text-success" style="font-size:25px;"></i>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-md">
+                <form action="">
+                    <h4><b>Thông tin người nhận</b></h4>
+                    <i class="fa-solid fa-person text-success"></i>
+                    <lable for="">Tên người nhận</label>
+                        <div class="form-floating my-3 border border-success border-2 rounded-3">
+                            <input class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Tên người nhận</label>
+                        </div>
+                        <i class="fa-solid fa-phone text-success"></i>
+                        <label for="">Số điện thoại</label>
+                        <div class="form-floating my-3 border border-success border-2 rounded-3">
+                            <input class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Số điện thoại</label>
+                        </div>
+                        <i class="fa-solid fa-location-dot text-success"></i>
+                        <label for="">Địa chỉ nhận hàng</label>
+                        <div class="form-floating my-3 border border-success border-2 rounded-3">
+                            <input class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Địa chỉ nhận hàng</label>
+                        </div>
+                </form>
+            </div>
+            <div class="col-md">
+                <h4><b>Phương thức vận chuyển</b></h4>
+                <div class="row">
+                    <div class="col my-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              Hỏa Tốc 
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col my-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              Tiết kiệm
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col my-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              Nhanh
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <h4><b>Phương thức thanh toán</b></h4>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="radio" name="pttt" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Thanh toán khi nhận hàng</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="radio" name="pttt" id="flexSwitchCheckChecked" checked>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Ví AkazaPay</label>
+                    <p class="border border-secondary rounded-3 p-2">
+                        Ví AkazaPay<i class="fa-solid fa-hand-holding-dollar float-end text-danger h1 pe-1"></i> <br> Giảm 100k cho lần đầu liên kết
+                    </p>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="radio" name="pttt" id="flexSwitchCheckChecked" checked>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Thẻ tín dụng/Ghi nợ</label>
+                    <p>
+                        <div class="row">
+                            <img src="img/thevisa.webp" class="rounded-3" style="width:100px;" alt="">
+                            <img src="img/thejcb.png" class="rounded-3" style="width:100px;" alt="">
+                            <img src="img/thesacombank.png" class="rounded-3" style="width:100px;" alt="">
+                            <img src="img/themomo.png" class="rounded-3 pt-1" style="width:70px;" alt="">
+                            <img src="img/theshoppepay.png" class="rounded-3 float-end pt-1" style="width:70px;" alt="">
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md">
+                <h4><b>Thanh toán</b></h4>
+                <div class="row border border-secondary p-2 border-2 rounded-3 mx-auto my-2">
+                    <div class="col">
+                        <p>Phí vận chuyển:</p>
+                        <hr>
+                        <p>Tổng tiền:</p>
+                        <hr>
+                        <p>Tổng thanh toán:</p>
+                    </div>
+                    <div class="col float-end">
+                        <p>0đ</p>
+                        <hr>
+                        <p>192.900đ</p>
+                        <hr>
+                        <p><b>192.900đ</b></p>
+                    </div>
+                    <a href="" class="btn btn-outline-danger">Thanh toán ngay</a>
+                </div>
+            </div>
+        </div>
+        <div class="row border border-success border-2 mb-5 mx-auto pt-2 pe-4 rounded-3 ">
+            <div class="col"><i class="fas fa-shipping-fast h4 text-success px-3 py-1"></i> <b>Vận chuyển nhanh</b> </div>
+            <div class="col-md"><i class="fas fa-lock h4 text-success px-3 py-1"></i> <b>Bảo mật thông tin</b> </div>
+            <div class="col"> <i class="fas fa-redo-alt h4 text-success px-3 py-1"></i> <b>Đổi trả dễ dàng</b> </div>
+            <div class="col-md"> <i class="fas fa-headset h4 text-success px-3 py-1"></i> <b>Hỗ trợ 24/24</b> </div>
+        </div>
+    </div>
+
+
+    </div>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-success text-white mt-3 ">
+        <section class=" pt-3 border-bottom ">
+            <p class="text-center h2 ">AKAZA BOOKSTORE</p>
+        </section>
+        <section>
+            <div class="container text-center text-md-start mt-5 ">
+                <div class="row mt-3 r ">
+                    <div class="col-md-3 mx-auto mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 ">
+                            DỊCH VỤ
+                        </h6>
+                        <p>
+                            <a href="#! " class="text-none ">Điều khoản sử dụng</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Chính sách bảo mật</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Phương thức ưu đãi</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Chăm sóc khách hàng</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 mx-auto mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 ">
+                            TÀI KHOẢN CỦA TÔI
+                        </h6>
+                        <p>
+                            <a href=" " class="text-none ">Đăng nhập/Tạo tài khoản mới</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Chi tiết tài khoản</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Ưu đãi</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Lịch sử mua hàng</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 mx-auto mb-md-0 mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 ">
+                            LIÊN HỆ
+                        </h6>
+                        <p><i class="fas fa-home me-3 "></i> Trường Cao Đẳng Cần Thơ</p>
+                        <p>
+                            <i class="fas fa-envelope me-3 "></i> akaza369@bookstore.com.vn
+                        </p>
+                        <p><i class="fas fa-phone me-3 "></i>07113952103</p>
+                    </div>
+                    <div class="col-md-3 mx-auto mb-4 border-start ">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.0326630758086!2d105.76298841376212!3d10.0141606755404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a088337f302b39%3A0x6ae5bb5ecf4928b9!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEPhuqduIFRoxqEsIDQxMyDEkcaw4budbmcgMzAgVGjDoW5nIDQsIHBoxrDhu51uZyBIxrBuZyBM4bujaSwgcXXhuq1uIE5pbmggS2nhu4F1LCA0MTMgxJDGsOG7nW5nIDMwIFRow6FuZyA0LCBIxrBuZyBM4bujaSwgTmluaCBLaeG7gXUsIEPhuqduIFRoxqEgOTIwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1654954698805!5m2!1svi!2s "
+                            width="100% " height="300px " style="border:0; " class="maps " allowfullscreen=" " loading="lazy " referrerpolicy="no-referrer-when-downgrade "></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="text-center p-4 " style="background-color: rgba(0, 0, 0, 0.05); ">
+            <i class="fa-solid fa-book-journal-whills " style="font-size:30px ; "></i> Giấy chứng nhận Đăng ký Kinh doanh AKAZA BOOKSTORE do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp ngày 03/06/2009.
+        </div>
+    </footer>
+</body>
+
+</html>
